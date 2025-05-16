@@ -44,7 +44,7 @@ h1 {
   list-style: none;
 }
 
-#menu  > li {
+#menu > li {
   margin-bottom: 1em;
 }
 
@@ -61,11 +61,10 @@ nav {
   box-shadow: 0 2px 2px #3a3a3a;
   display: none;
   top: 100%;
-
 }
 
 /* check  boxes have a pseudo-class identifying if currently checked = useful for toggles */
-#nav-toggle:checked~nav {
+#nav-toggle:checked ~ nav {
   display: block;
 }
 
@@ -85,4 +84,44 @@ main {
 
 footer {
   background-color: chartreuse;
+}
+
+@media screen and (min-width: 768px) {
+  /* The header elements */
+  nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+  }
+
+  #menu {
+    display: flex;
+  }
+
+  #menu > li {
+    padding-left: 1rem;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  #logo {
+    font-size: 200%;
+    line-height: 75px;
+    margin: 0 0.5rem;
+  }
+
+  /* Main content */
+  main {
+    margin-top: 79px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+  }
 }
